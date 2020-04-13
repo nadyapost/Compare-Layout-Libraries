@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		132F02CB24440A4A0070378E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02CA24440A4A0070378E /* AppDelegate.swift */; };
 		132F02CD24440A4A0070378E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02CC24440A4A0070378E /* SceneDelegate.swift */; };
-		132F02CF24440A4A0070378E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02CE24440A4A0070378E /* ViewController.swift */; };
-		132F02EA244453410070378E /* ViewControllerWithSnapkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02E9244453410070378E /* ViewControllerWithSnapkit.swift */; };
-		132F02EC244453700070378E /* ViewControllerWithPureLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02EB244453700070378E /* ViewControllerWithPureLayout.swift */; };
+		132F02CF24440A4A0070378E /* EaseyPeasyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02CE24440A4A0070378E /* EaseyPeasyViewController.swift */; };
+		132F02EA244453410070378E /* SnapkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02E9244453410070378E /* SnapkitViewController.swift */; };
+		132F02EC244453700070378E /* PureLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132F02EB244453700070378E /* PureLayoutViewController.swift */; };
 		13E5E1EF24447516008AFEE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132F02D124440A4A0070378E /* Main.storyboard */; };
 		13E5E1F024447516008AFEE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132F02D624440A4C0070378E /* LaunchScreen.storyboard */; };
 		13F8CE21244455B50063360C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F8CE20244455B50063360C /* Assets.xcassets */; };
@@ -44,11 +44,11 @@
 		132F02C724440A4A0070378E /* CompareLayoutLibraries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompareLayoutLibraries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132F02CA24440A4A0070378E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		132F02CC24440A4A0070378E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
-		132F02CE24440A4A0070378E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = SOURCE_ROOT; };
+		132F02CE24440A4A0070378E /* EaseyPeasyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseyPeasyViewController.swift; sourceTree = SOURCE_ROOT; };
 		132F02D124440A4A0070378E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		132F02D624440A4C0070378E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		132F02E9244453410070378E /* ViewControllerWithSnapkit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithSnapkit.swift; sourceTree = SOURCE_ROOT; };
-		132F02EB244453700070378E /* ViewControllerWithPureLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithPureLayout.swift; sourceTree = SOURCE_ROOT; };
+		132F02E9244453410070378E /* SnapkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapkitViewController.swift; sourceTree = SOURCE_ROOT; };
+		132F02EB244453700070378E /* PureLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureLayoutViewController.swift; sourceTree = SOURCE_ROOT; };
 		13F8CE20244455B50063360C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		13FA31F1244472F1004DA2C7 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		13FA31F5244472F3004DA2C7 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 			children = (
 				132F02CA24440A4A0070378E /* AppDelegate.swift */,
 				132F02CC24440A4A0070378E /* SceneDelegate.swift */,
-				132F02E9244453410070378E /* ViewControllerWithSnapkit.swift */,
-				132F02EB244453700070378E /* ViewControllerWithPureLayout.swift */,
-				132F02CE24440A4A0070378E /* ViewController.swift */,
+				132F02E9244453410070378E /* SnapkitViewController.swift */,
+				132F02EB244453700070378E /* PureLayoutViewController.swift */,
+				132F02CE24440A4A0070378E /* EaseyPeasyViewController.swift */,
 				132F02D124440A4A0070378E /* Main.storyboard */,
 				13F8CE20244455B50063360C /* Assets.xcassets */,
 				132F02D624440A4C0070378E /* LaunchScreen.storyboard */,
@@ -205,11 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132F02CF24440A4A0070378E /* ViewController.swift in Sources */,
+				132F02CF24440A4A0070378E /* EaseyPeasyViewController.swift in Sources */,
 				132F02CB24440A4A0070378E /* AppDelegate.swift in Sources */,
 				132F02CD24440A4A0070378E /* SceneDelegate.swift in Sources */,
-				132F02EC244453700070378E /* ViewControllerWithPureLayout.swift in Sources */,
-				132F02EA244453410070378E /* ViewControllerWithSnapkit.swift in Sources */,
+				132F02EC244453700070378E /* PureLayoutViewController.swift in Sources */,
+				132F02EA244453410070378E /* SnapkitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

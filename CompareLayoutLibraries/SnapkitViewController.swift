@@ -48,7 +48,7 @@ class ViewControllerWithSnapkit: UIViewController {
         setupViews()
         addViewsToHstack()
         
-        view.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     }
     func setupVStack() {
