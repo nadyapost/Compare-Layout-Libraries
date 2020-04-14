@@ -10,6 +10,7 @@ import UIKit
 import EasyPeasy
 
 class EaseyPeasyViewController: UIViewController {
+    
     let vStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -17,7 +18,6 @@ class EaseyPeasyViewController: UIViewController {
         stackView.distribution = .fillEqually
         return stackView
     }()
-    
     let hStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -26,44 +26,33 @@ class EaseyPeasyViewController: UIViewController {
         return stackView
     }()
     
-    let blueView: UIView = {
+    func makeUIView(_ color: UIColor) -> UIView {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        view.backgroundColor = color
         return view
-        }()
-    let redView: UIView = {
-        let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-        return view
-        }()
-    let yellowView: UIView = {
-        let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
-        return view
-        }()
-    let greenView: UIView = {
-        let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        return view
-        }()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.1411764706, green: 0.1411764706, blue: 0.1411764706, alpha: 1)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         view.addSubview(vStackView)
-        vStackView.easy.layout(Edges())
+        vStackView.easy.layout(Margins())
         setupVStackViews()
         addViewsToHstack()
     }
     
     func setupVStackViews() {
+        let blueView = makeUIView(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1))
         vStackView.addSubview(blueView)
         blueView.easy.layout(
             Height(>=50),
             Left().to(vStackView, .left),
             Right().to(vStackView, .right)
         )
+        
+        let redView = makeUIView(#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1))
         vStackView.addSubview(redView)
         redView.easy.layout(
             Width().like(blueView)
@@ -72,37 +61,32 @@ class EaseyPeasyViewController: UIViewController {
         hStackView.easy.layout(
             Width().like(blueView)
         )
+        
+        let yellowView = makeUIView(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
         vStackView.addSubview(yellowView)
         yellowView.easy.layout(
             Width().like(blueView)
         )
+        
+        let greenView = makeUIView(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
         vStackView.addSubview(greenView)
         greenView.easy.layout(
             Width().like(blueView)
         )
 
-        vStackView.addArrangedSubviews([UIView(), blueView, redView, hStackView, yellowView, greenView, UIView()])
+        vStackView.addArrangedSubviews([blueView, redView, hStackView, yellowView, greenView])
     }
     
     func addViewsToHstack() {
-        let purpleView: UIView = {
-            let view = UIView()
-            view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
-            hStackView.addSubview(view)
-            return view
-        }()
-        let peachView: UIView = {
-            let view = UIView()
-            view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
-            hStackView.addSubview(view)
-            return view
-        }()
-        let pinkView: UIView = {
-            let view = UIView()
-            view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            hStackView.addSubview(view)
-            return view
-        }()
+        let purpleView = makeUIView(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1))
+        hStackView.addSubview(purpleView)
+        
+        let peachView = makeUIView(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))
+        hStackView.addSubview(peachView)
+
+        let pinkView = makeUIView(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))
+        hStackView.addSubview(pinkView)
+
         hStackView.addArrangedSubviews([purpleView, peachView, pinkView])
     }
 }
